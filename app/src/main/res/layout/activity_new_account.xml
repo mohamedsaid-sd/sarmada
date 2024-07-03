@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/litegray"
+    tools:context=".new_account">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_erorr_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aroundred"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="رسالة خطا"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/jana"
+                android:text="للحصول علي اشتراك جديد رجاءا قم بملئ الفورم التالي !"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/jana"
+                android:padding="5dp"
+                android:text="البيانات الشخصية"
+                android:textColor="@color/buttons"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+                tools:ignore="ContentDescription,HardcodedText" />
+            <Button
+                android:onClick="fun_upload_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اختيار الصورة"
+                android:fontFamily="@font/jana"
+                android:background="@color/buttons"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/edname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:hint="الاسم رباعي"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="ذكر" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="انثى" />
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/cpp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/litegray"
+                    android:gravity="center"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showNameCode="true"
+                    app:ccp_textSize="12sp">
+
+                </com.hbb20.CountryCodePicker>
+
+                <EditText
+                    android:id="@+id/txt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:background="@drawable/whiterobackground"
+                    android:fontFamily="@font/jana"
+                    android:gravity="center"
+                    android:hint="رقم الهاتف"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/cppw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/litegray"
+                    android:gravity="center"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showNameCode="true"
+                    app:ccp_textSize="12sp">
+
+                </com.hbb20.CountryCodePicker>
+
+                <EditText
+                    android:id="@+id/txt_whatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:background="@drawable/whiterobackground"
+                    android:fontFamily="@font/jana"
+                    android:gravity="center"
+                    android:hint="رقم الواتساب"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/around"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:hint="السجل المرضي"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:hint="العنوان"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/jana"
+                android:padding="5dp"
+                android:text="البيانات المرضية"
+                android:textColor="@color/buttons"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/edreport1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:gravity="start|top"
+                android:hint="فصيلة الدم"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edreport2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:gravity="start|top"
+                android:hint="العمليات"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edreport3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:autofillHints=""
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:gravity="start|top"
+                android:hint="العلاجات الدائمة"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/edreport4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:gravity="start|top"
+                android:hint="الامراض المزمنة"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edreport5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:gravity="start|top"
+                android:hint="آخر تشخيص"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txtpprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/jana"
+                android:padding="5dp"
+                android:text="بيانات الدخول"
+                android:textColor="@color/buttons"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/eduser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:hint="إسم المستخدم"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:hint="كلمة المرور"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edpassc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:autofillHints=""
+                android:background="@color/litegray"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:hint="تاكيد كلمة المرور"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:onClick="fun_new_request"
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:background="@color/buttons"
+                android:fontFamily="@font/jana"
+                android:padding="5dp"
+                android:text="تقديم الطلب"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/jana"
+        android:padding="5dp"
+        android:text="طلب اشتراك جديد"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        tools:layout_editor_absoluteX="20dp"
+        tools:ignore="HardcodedText"
+        app:drawableStartCompat="@drawable/ic_baseline_add_card_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

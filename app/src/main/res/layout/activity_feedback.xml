@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/litegray"
+    tools:context=".feedback">
+
+
+    <LinearLayout
+        android:id="@+id/liner_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/litegray"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_baseline_sentiment_very_satisfied_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:fontFamily="@font/jana"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="شكرا لمراسلتنا , تم ارسال رسالتك بنجاح , نعمل ليل نهار من اجل راحتكم !"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/liner_feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttons"
+                android:fontFamily="@font/jana"
+                android:padding="20dp"
+                android:text="شركة سرمدا للعناية الطبية"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jana"
+                android:padding="10dp"
+                android:text="نحن سعداء بتواصلك معنا , كيف يمكننا خدمتك ؟"
+                android:textColor="@color/buttons"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jana"
+                android:padding="5dp"
+                android:text="الغرض من التواصل :"
+                android:textColor="@color/red" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jana"
+                android:padding="10dp"
+                android:text="قم باضافة صورة لتوضيح المشكلة"
+                android:textColor="@color/buttons"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/buttons"
+                android:drawableStart="@drawable/ic_baseline_attachment_24"
+                android:fontFamily="@font/jana"
+                android:onClick="fun_attach_image"
+                android:text="صورة المشكلة"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jana"
+                android:padding="5dp"
+                android:text="مضمون التواصل :"
+                android:textColor="@color/red" />
+
+            <EditText
+
+                android:id="@+id/edfeedback"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:fontFamily="@font/jana"
+                android:gravity="start|top"
+                android:hint="ساعدنا بوصف المشكلة بشكل واضح ودقيق"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp" />
+
+            <Button
+
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@color/buttons"
+                android:drawableStart="@android:drawable/ic_menu_send"
+                android:fontFamily="@font/jana"
+                android:onClick="fun_send_feedback"
+                android:text="إرسال "
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jana"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="نسعد باستقبال اراءكم في اي وقت  !"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="fun_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

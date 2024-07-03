@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".support"
+    android:background="@color/litegray">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:background="@color/litegray" android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:textStyle="bold"
+            android:padding="20dp"
+            android:textColor="@color/buttons"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" تسعدنا خدمتك !" />
+
+        <TextView
+            android:padding="10dp"
+            android:textColor="@color/buttons"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" يمكنك التواصل معنا من خلال  " />
+
+        <Button
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/around"
+            android:drawableStart="@drawable/facebook"
+            android:gravity="center"
+            android:onClick="openFacebook"
+            android:padding="10dp"
+            android:text="facebook"
+            android:textColor="@color/buttons"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/around"
+            android:drawableStart="@drawable/linkedin"
+            android:gravity="center"
+            android:onClick="openLinkedin"
+            android:padding="10dp"
+            android:text="Linkedin"
+            android:textColor="@color/buttons"
+            android:textSize="20sp" />
+
+        <TextView
+            android:padding="10dp"
+            android:textColor="@color/buttons"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" ارقام الدعم الفني :  " />
+
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/around"
+            android:drawableEnd="@android:drawable/ic_menu_call"
+            android:gravity="center"
+            android:onClick="call1"
+            android:padding="10dp"
+            android:text="+201004869800"
+            android:textColor="@color/buttons"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/around"
+            android:drawableEnd="@android:drawable/ic_menu_call"
+            android:gravity="center"
+            android:onClick="call2"
+            android:padding="10dp"
+            android:text="+201009375800"
+            android:textColor="@color/buttons"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/around"
+            android:drawableEnd="@android:drawable/ic_menu_call"
+            android:gravity="center"
+            android:onClick="call3"
+            android:padding="10dp"
+            android:text="+201006234800"
+            android:textColor="@color/buttons"
+            android:textSize="20sp" />
+
+
+
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_baseline_support_agent_24"
+            tools:srcCompat="@drawable/ic_baseline_support_agent_24" />
+
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".medical_report">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttons"
+                android:fontFamily="@font/jana"
+                android:gravity="center"
+                android:text="الملف الطبي "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/buttons"
+                android:onClick="fun_back"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/litegray"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/around"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/jana"
+                    android:gravity="center"
+                    android:text="مساحة لارفاق المستندات الطبية والتقارير ومتابعة التفاصيل !"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView34"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|right"
+                            android:text="اضافة نص"
+                            android:textColor="@color/buttons"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <EditText
+                            android:id="@+id/edtxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:fontFamily="@font/jana"
+                            android:gravity="start|top"
+                            android:hint="ماذا اخبرك الطبيب ؟"
+                            android:inputType="textMultiLine"
+                            android:textColorHint="#757575"
+                            android:textSize="16sp"
+                            tools:ignore="Autofill,HardcodedText,NestedWeights" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="اضافة صورة"
+                            android:textColor="@color/buttons"
+                            tools:ignore="HardcodedText,NestedWeights" />
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:contentDescription="TODO"
+                            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+                        <Button
+                            android:id="@+id/button14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/aroundbutton"
+                            android:drawableStart="@drawable/ic_baseline_attachment_24"
+                            android:fontFamily="@font/jana"
+                            android:onClick="fun_attach_image"
+                            android:padding="5dp"
+                            android:text="الصورة"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/aroundgreen"
+                    android:drawableEnd="@android:drawable/ic_menu_add"
+                    android:fontFamily="@font/jana"
+                    android:onClick="fun_add_medical_file"
+                    android:text="اضافة للتقرير"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/aroundgreen"
+                    android:drawableEnd="@android:drawable/ic_menu_add"
+                    android:fontFamily="@font/jana"
+                    android:onClick="fun_edit_medical_file"
+                    android:text="تعديل التقرير"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/jana"
+                android:text="جميع مستنداتك في مكان واحد"
+                android:textColor="@color/buttons"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_medical_file"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

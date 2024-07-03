@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/buttons"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttons"
+                app:popupTheme="@style/PopupOverlay"
+                app:subtitleTextColor="@color/white"
+                app:titleTextColor="@color/white">
+
+                <TextView
+                    android:id="@+id/txt_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/buttons"
+                    android:fontFamily="@font/jana"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="الرئيسية"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:onClick="fun_notification"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_baseline_notifications_24" />
+
+                <TextView
+                    android:id="@+id/notify"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/around"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="191dp"
+                    tools:layout_editor_absoluteY="13dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:background="@color/black"
+                    android:id="@+id/slide_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/banar1" />
+
+                <HorizontalScrollView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            app:srcCompat="@drawable/banar1"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            app:srcCompat="@drawable/banar2"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:contentDescription="TODO"
+                            app:srcCompat="@drawable/banar3"
+                            tools:ignore="ContentDescription,HardcodedText" />
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            app:srcCompat="@drawable/banar4"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/imageView19"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/banner5"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/imageView20"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/banar6"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/banar7"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/jana"
+                    android:gravity="center"
+                    android:text="جميع النواحي الطبية !"
+                    android:textColor="@color/background"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/color"
+                    android:progressDrawable="@drawable/ic_baseline_add_24"
+                    android:progressTint="@color/buttons"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/jana"
+                    android:gravity="center"
+                    android:text="رعاية اجتماعية متكاملة"
+                    android:textColor="@color/background"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/buttons"
+            android:fontFamily="@font/jana"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=" الحقوق محفوظة @شركة سرمدا للعناية الطبية 2023 "
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <!--        <include-->
+<!--            layout="@layout/activity_main"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1" />-->
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

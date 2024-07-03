@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="5dp"
+    tools:context=".profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@color/litebackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgprofile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/around"
+                    app:srcCompat="@drawable/bar" />
+
+                <LinearLayout
+                    android:background="@color/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/background"
+                        android:fontFamily="@font/jana"
+                        android:gravity="center_vertical"
+                        android:text="الملف الشخصي"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+
+                        android:layout_margin="10dp"
+                        android:background="@color/background"
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="fun_back"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/litebackground"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/litebackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/jana"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="اسم العميل"
+                        android:textColor="@color/buttons"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/txtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/jana"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="محمد عمر محمد احمد"
+                        android:textColor="@color/buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgqrcode"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/ic_baseline_qr_code_24"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView200"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/jana"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="المعلومات الشخصية"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView192"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/jana"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="رقم الهاتف "
+                        android:textColor="@color/buttons"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/txtphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/around"
+                        android:fontFamily="sans-serif"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text="+123-456-465-7890"
+                        android:textColor="@color/buttons"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView201"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/jana"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="الاشتراك"
+                        android:textColor="@color/buttons"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/txtsub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/around"
+                        android:fontFamily="sans-serif"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text="Basic , Monthly and Personal"
+                        android:textColor="@color/buttons"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView220"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/jana"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="التقارير الطبية"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,InefficientWeight,RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="7dp"
+                        android:background="@color/litebackground"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView193"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="Self pation report :"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView183"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="الاسم مازن عمر العمر 23 اعاني من مرض و قمت ب 3 عمليات سابقة تلقيت علاج والان مصاب بمرض الضغط"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView230"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="20:20 18/12/2023"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="7dp"
+                        android:background="@color/litebackground"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView194"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="د.عمر محمد علي"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView184"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="الاسم مازن عمر العمر 23 اعاني من مرض و قمت ب 3 عمليات سابقة تلقيت علاج والان مصاب بمرض الضغط"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView231"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="20:20 18/12/2023"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="7dp"
+                        android:background="@color/litebackground"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView195"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="د.ايمان محمد عمر"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView185"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="الاسم مازن عمر العمر 23 اعاني من مرض و قمت ب 3 عمليات سابقة تلقيت علاج والان مصاب بمرض الضغط"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView234"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="20:20 18/12/2023"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:background="@color/litebackground"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView196"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="د.كيرليس رفعت"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView186"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="الاسم مازن عمر العمر 23 اعاني من مرض و قمت ب 3 عمليات سابقة تلقيت علاج والان مصاب بمرض الضغط"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView235"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="20:20 18/12/2023"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/jana"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="معلومات الدخول"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,InefficientWeight,RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView197"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text=" المستخدم"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView187"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="hibat2023"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="كلمة المرور"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="********"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView190"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="كودQR"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView180"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="QR10012"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView191"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/jana"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="الرصيد الموجود"
+                            android:textColor="@color/buttons"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/textView182"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/around"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="10dp"
+                            android:text="100 ج"
+                            android:textColor="@color/teal_700"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/green"
+                android:drawableStart="@android:drawable/ic_menu_send"
+                android:fontFamily="@font/jana"
+                android:onClick="fun_feedback"
+                android:padding="10dp"
+                android:text="التبليغ عن مشكلة او تقديم اقتراح"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/red"
+                android:drawableStart="@drawable/ic_baseline_login_24"
+                android:fontFamily="@font/jana"
+                android:onClick="fun_log_out"
+                android:padding="10dp"
+                android:text="تسجيل خروج"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

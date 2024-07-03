@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Using the camera permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/loooo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/loooo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".classes"
+            android:exported="false" />
+        <activity
+            android:name=".welcome_school"
+            android:exported="false" />
+        <activity
+            android:name=".welcomeschool"
+            android:exported="false" />
+        <activity
+            android:name=".lessons"
+            android:exported="false" />
+        <activity
+            android:name=".lesson"
+            android:configChanges="orientation|uiMode|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".units"
+            android:exported="false" />
+        <activity
+            android:name=".subjects"
+            android:exported="false" />
+        <activity
+            android:name=".select"
+            android:exported="false" />
+        <activity
+            android:name=".support"
+            android:exported="false" />
+        <activity
+            android:name=".update_application"
+            android:exported="false" />
+        <activity
+            android:name=".medical_report"
+            android:exported="false" />
+        <activity
+            android:name=".notofications"
+            android:exported="false" />
+        <activity
+            android:name=".main_cat"
+            android:exported="false" />
+        <activity
+            android:name=".setting"
+            android:exported="false" />
+        <activity
+            android:name=".Success"
+            android:exported="false" />
+        <activity
+            android:name=".ads"
+            android:exported="false" />
+        <activity
+            android:name=".drawer"
+            android:exported="false" />
+        <activity
+            android:name=".detailes"
+            android:exported="false" />
+        <activity
+            android:name=".feedback"
+            android:exported="false" />
+        <activity
+            android:name=".intro5"
+            android:exported="false" />
+        <activity
+            android:name=".intro4"
+            android:exported="false" />
+        <activity
+            android:name=".intro3"
+            android:exported="false" />
+        <activity
+            android:name=".intro2"
+            android:exported="false" />
+        <activity
+            android:name=".intro1"
+            android:exported="false" />
+        <activity
+            android:name=".services"
+            android:exported="false" />
+        <activity
+            android:name=".medical_cat"
+            android:exported="false" />
+        <activity
+            android:name=".doctor_sp"
+            android:exported="false" />
+        <activity
+            android:name=".labs"
+            android:exported="false" />
+        <activity
+            android:name=".pharmacies"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".doctors"
+            android:exported="false" />
+        <activity
+            android:name=".new_account"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+    </application>
+
+</manifest>
